@@ -983,7 +983,7 @@ ORDER BY d.department_name;`
 
   const QuestionCard = ({ questions, title, isCoding }: { questions: QuestionType[]; title: string; isCoding?: boolean }) => (
     <div className="mb-12">
-      <h3 className="text-2xl md:text-3xl font-bold mb-8 text-indigo-600">{title}</h3>
+      <h3 className="text-2xl md:text-3xl font-bold mb-8 text-blue-500 dark:text-purple-400">{title}</h3>
       <div className="space-y-4">
         {questions.map((item: QuestionType) => (
           <motion.div
@@ -997,12 +997,12 @@ ORDER BY d.department_name;`
               tabIndex={0}
               onClick={() => toggleQuestion(item.id)}
               onKeyDown={(e) => handleKeyToggle(e, item.id)}
-              className="bg-white border border-gray-200 hover:border-indigo-400 hover:shadow-md transition-all cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
+              className="bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-gray-700 hover:border-indigo-400 hover:shadow-md transition-all cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
             >
               <CardContent className="p-6 w-full text-left">
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-1">
-                      <p className="text-lg font-semibold text-gray-900 mb-2">
+                      <p className="text-lg font-semibold text-black dark:text-white mb-2">
                         Q{item.id}. {item.question}
                       </p>
                     </div>
@@ -1012,7 +1012,7 @@ ORDER BY d.department_name;`
                       }}
                       className="flex-shrink-0 mt-1"
                     >
-                      <ChevronDown className="w-5 h-5 text-indigo-600" />
+                      <ChevronDown className="w-5 h-5 text-blue-500 dark:text-purple-400" />
                     </motion.div>
                   </div>
 
@@ -1022,7 +1022,7 @@ ORDER BY d.department_name;`
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.3 }}
-                      className="mt-4 pt-4 border-t border-gray-200"
+                      className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700"
                     >
                       {isCoding ? (
                         <div>
@@ -1038,7 +1038,7 @@ ORDER BY d.department_name;`
                                 className={`px-4 py-2 rounded-lg font-semibold transition-all text-sm ${
                                   selectedLanguage === lang
                                     ? "bg-indigo-600 text-white"
-                                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                                    : "bg-gray-100 text-gray-600 dark:text-gray-300 hover:bg-gray-200"
                                 }`}
                               >
                                 {lang.toUpperCase()}
@@ -1068,7 +1068,7 @@ ORDER BY d.department_name;`
                         </div>
                       ) : (
                         <div>
-                          <span className="text-indigo-600 font-semibold block mb-3">Answer:</span>
+                          <span className="text-blue-500 dark:text-purple-400 font-semibold block mb-3">Answer:</span>
                           {activeSection === "sql" ? (
                             <SyntaxHighlighter
                               language="sql"
@@ -1085,7 +1085,7 @@ ORDER BY d.department_name;`
                               {item.answer || ""}
                             </SyntaxHighlighter>
                           ) : (
-                            <p className="text-gray-700 leading-relaxed">
+                            <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                               {item.answer}
                             </p>
                           )}
@@ -1139,10 +1139,10 @@ ORDER BY d.department_name;`
     <div className="min-h-screen bg-gradient-to-b from-white via-blue-50 to-white">
       <div className="flex min-h-screen">
         {/* Sidebar */}
-        <aside className="w-64 bg-white border-r border-gray-200 sticky top-0 h-screen overflow-y-auto">
+        <aside className="w-64 bg-white dark:bg-[#1a1a1a] border-r border-gray-200 dark:border-gray-700 sticky top-0 h-screen overflow-y-auto">
           <div className="p-6 space-y-8">
             {/* Logo/Back Button */}
-            <Link href="/" className="flex items-center gap-2 text-indigo-600 hover:text-indigo-700 transition-colors group">
+            <Link href="/" className="flex items-center gap-2 text-blue-500 dark:text-purple-400 hover:text-indigo-700 transition-colors group">
               <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
               <span className="font-semibold">Back to Home</span>
             </Link>
@@ -1161,7 +1161,7 @@ ORDER BY d.department_name;`
                     className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-all text-left ${
                       activeSection === item.id
                         ? "bg-gray-900 text-white font-semibold"
-                        : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+                        : "text-gray-600 dark:text-gray-300 hover:text-black dark:text-white hover:bg-gray-100"
                     }`}
                   >
                     <Icon className="w-5 h-5" />
@@ -1183,7 +1183,7 @@ ORDER BY d.department_name;`
         {/* Main Content */}
         <main className="flex-1">
           {/* Header */}
-          <section className="bg-white border-b border-gray-200 sticky top-0 z-10">
+          <section className="bg-white dark:bg-[#1a1a1a] border-b border-gray-200 dark:border-gray-700 sticky top-0 z-10">
             <div className="px-8 py-6">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -1193,8 +1193,8 @@ ORDER BY d.department_name;`
                 <div className="flex items-center gap-4 mb-4">
                   <span className="text-5xl">⭐</span>
                   <div>
-                    <h1 className="text-4xl font-bold text-gray-900">TCS Prime Profile</h1>
-                    <p className="text-gray-600 mt-1">Build Strong Foundations for a Premium Career Path</p>
+                    <h1 className="text-4xl font-bold text-black dark:text-white">TCS Prime Profile</h1>
+                    <p className="text-gray-600 dark:text-gray-300 mt-1">Build Strong Foundations for a Premium Career Path</p>
                   </div>
                 </div>
               </motion.div>
@@ -1209,10 +1209,10 @@ ORDER BY d.department_name;`
               transition={{ duration: 0.6 }}
               className="mb-12"
             >
-              <h2 className="text-4xl font-bold text-center mb-2 text-gray-900">
+              <h2 className="text-4xl font-bold text-center mb-2 text-black dark:text-white">
                 {getSectionTitle()}
               </h2>
-              <p className="text-center text-gray-600 mt-4 max-w-2xl mx-auto">
+              <p className="text-center text-gray-600 dark:text-gray-300 mt-4 max-w-2xl mx-auto">
                 Click on any question to reveal the detailed answer. Study these questions thoroughly for your TCS Prime interview.
               </p>
             </motion.div>
@@ -1246,11 +1246,11 @@ ORDER BY d.department_name;`
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6 }}
-              className="text-4xl font-bold text-center mb-4 text-gray-900"
+              className="text-4xl font-bold text-center mb-4 text-black dark:text-white"
             >
               Interview Preparation Tips
             </motion.h2>
-            <p className="text-center text-gray-600 text-lg mb-12 max-w-2xl mx-auto">
+            <p className="text-center text-gray-600 dark:text-gray-300 text-lg mb-12 max-w-2xl mx-auto">
               Essential strategies to excel in your TCS Prime interview
             </p>
 
@@ -1262,11 +1262,11 @@ ORDER BY d.department_name;`
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <Card className="bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all h-full">
+                  <Card className="bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-gray-700 rounded-2xl shadow-sm hover:shadow-md transition-all h-full">
                     <CardContent className="p-6">
-                      <div className="text-indigo-600 mb-4 text-2xl">{tip.icon}</div>
-                      <h3 className="text-lg font-bold mb-2 text-gray-900">{tip.title}</h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">{tip.description}</p>
+                      <div className="text-blue-500 dark:text-purple-400 mb-4 text-2xl">{tip.icon}</div>
+                      <h3 className="text-lg font-bold mb-2 text-black dark:text-white">{tip.title}</h3>
+                      <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">{tip.description}</p>
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -1288,15 +1288,15 @@ ORDER BY d.department_name;`
               <p className="text-lg mb-8 text-indigo-100">
                 Practice these questions daily, master the concepts, and build the confidence to crack your interview. Consistency is key to success!
               </p>
-              <Button className="rounded-full px-8 py-4 text-lg font-semibold bg-white text-indigo-600 hover:bg-gray-100 transition-all">
+              <Button className="rounded-full px-8 py-4 text-lg font-semibold bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-gray-700 text-blue-500 dark:text-purple-400 hover:bg-gray-100 dark:hover:bg-[#242424] transition-all">
                 Start Your Daily Preparation Plan
               </Button>
             </motion.div>
           </section>
 
           {/* Footer */}
-          <footer className="px-8 py-12 border-t border-gray-200 text-center bg-white">
-            <p className="text-gray-600 mb-2">
+          <footer className="px-8 py-12 border-t border-gray-200 dark:border-gray-700 text-center bg-white dark:bg-[#0f0f0f] transition-colors duration-300">
+            <p className="text-gray-600 dark:text-gray-300 mb-2">
               Build strong foundations. Master core concepts. Ace your TCS Prime interview.
             </p>
             <p className="text-gray-500 text-sm">

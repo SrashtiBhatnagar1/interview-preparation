@@ -20,14 +20,14 @@ function MoreNinjaChallenges() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+    <div className="min-h-screen bg-white dark:bg-[#0f0f0f] transition-colors duration-300">
       <div className="flex min-h-screen">
         {/* Sidebar Menu */}
-        <aside className="w-64 bg-white border-r border-gray-200 sticky top-0 h-screen overflow-y-auto">
+        <aside className="w-64 bg-white dark:bg-[#1a1a1a] border-r border-gray-200 dark:border-gray-700 sticky top-0 h-screen overflow-y-auto">
           <div className="p-6">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 mb-8 transition font-semibold"
+              className="inline-flex items-center gap-2 text-blue-500 dark:text-purple-400 hover:text-indigo-700 mb-8 transition font-semibold"
             >
               <ArrowLeft className="w-4 h-4" />
               Back to Home
@@ -48,7 +48,7 @@ function MoreNinjaChallenges() {
                       className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition ${
                         isActive
                           ? "bg-gray-900 text-white font-semibold"
-                          : "text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+                          : "text-gray-600 dark:text-gray-300 hover:text-black dark:text-white hover:bg-gray-100"
                       }`}
                     >
                       <Icon className="w-5 h-5" />
@@ -71,7 +71,7 @@ function MoreNinjaChallenges() {
         {/* Main Content */}
         <main className="flex-1">
           {/* Header */}
-          <section className="bg-white border-b border-gray-200 sticky top-0 z-10">
+          <section className="bg-white dark:bg-[#1a1a1a] border-b border-gray-200 dark:border-gray-700 sticky top-0 z-10">
             <div className="px-8 py-6">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -81,8 +81,8 @@ function MoreNinjaChallenges() {
                 <div className="flex items-center gap-4 mb-4">
                   <span className="text-5xl">🥷</span>
                   <div>
-                    <h1 className="text-4xl font-bold text-gray-900">TCS Ninja Profile</h1>
-                    <p className="text-gray-600 mt-1">More Advanced Questions & Challenges</p>
+                    <h1 className="text-4xl font-bold text-black dark:text-white">TCS Ninja Profile</h1>
+                    <p className="text-gray-600 dark:text-gray-300 mt-1">More Advanced Questions & Challenges</p>
                   </div>
                 </div>
               </motion.div>
@@ -96,14 +96,14 @@ function MoreNinjaChallenges() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <Card className="bg-white border border-gray-200 rounded-2xl shadow-lg">
+              <Card className="bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-gray-700 rounded-2xl shadow-lg">
                 <CardContent className="p-8">
                   <div className="text-center space-y-6">
                     <div className="text-6xl mb-6">🥷</div>
-                    <h2 className="text-3xl font-bold text-gray-900">
+                    <h2 className="text-3xl font-bold text-black dark:text-white">
                       Advanced Ninja Questions
                     </h2>
-                    <p className="text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto">
+                    <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto">
                       This section will contain additional Ninja-level interview questions, 
                       core programming challenges, aptitude problems, and behavioral scenarios 
                       specifically curated for the TCS Ninja profile.

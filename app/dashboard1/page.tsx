@@ -68,9 +68,9 @@ function TCSInterviewBundle() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+    <div className="min-h-screen bg-white dark:bg-[#0f0f0f] transition-colors duration-300">
       {/* Hero Section */}
-      <section className="px-6 py-20 md:py-32">
+      <section className="px-6 py-20 md:py-32 bg-white dark:bg-[#0f0f0f] transition-colors duration-300">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -87,21 +87,21 @@ function TCSInterviewBundle() {
             ⭐ Updated for 2026 — Latest TCS Curriculum
           </motion.div>
 
-          <h1 className="text-6xl md:text-7xl font-bold tracking-tight mb-8 leading-tight text-gray-900">
-            The Ultimate <span className="bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent">TCS Interview Bundle</span>
+          <h1 className="text-6xl md:text-7xl font-bold tracking-tight mb-8 leading-tight text-black dark:text-white">
+            The Ultimate <span className="bg-gradient-to-r from-blue-500 to-indigo-500 dark:from-blue-500 dark:to-purple-400 bg-clip-text text-transparent">TCS Interview Bundle</span>
           </h1>
 
-          <p className="text-xl text-gray-700 leading-relaxed mb-4">
-            Everything you need to <span className="text-gray-900 font-semibold">crack your TCS interview</span> in 2026.
+          <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+            Everything you need to <span className="text-black dark:text-white font-semibold">crack your TCS interview</span> in 2026.
           </p>
 
-          <p className="text-lg text-gray-600 leading-relaxed mb-8 max-w-3xl mx-auto">
-            This comprehensive bundle contains the <span className="text-gray-900 font-semibold">most commonly asked and most important TCS interview questions</span>, 
-            expertly curated based on the <span className="text-gray-900 font-semibold">latest 2026 curriculum</span>. 
+          <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8 max-w-3xl mx-auto">
+            This comprehensive bundle contains the <span className="text-black dark:text-white font-semibold">most commonly asked and most important TCS interview questions</span>, 
+            expertly curated based on the <span className="text-black dark:text-white font-semibold">latest 2026 curriculum</span>. 
             Everything here is built from real interview experiences of candidates who have successfully passed TCS hiring rounds.
           </p>
 
-          <p className="text-gray-600 mb-10 max-w-2xl mx-auto italic">
+          <p className="text-gray-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto italic">
             "You're not just preparing. You're training with proven strategies and real interview insights from the field."
           </p>
 
@@ -117,7 +117,7 @@ function TCSInterviewBundle() {
       </section>
 
       {/* Tracks Section */}
-      <section className="px-6 py-20 md:py-32">
+      <section className="px-6 py-20 md:py-32 bg-white dark:bg-[#0f0f0f] transition-colors duration-300">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0 }}
@@ -125,10 +125,10 @@ function TCSInterviewBundle() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900">
-              Choose Your <span className="text-indigo-600">TCS Track</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-black dark:text-white">
+              Choose Your <span className="text-blue-500 dark:text-purple-400">TCS Track</span>
             </h2>
-            <p className="text-gray-600 text-lg">
+            <p className="text-gray-600 dark:text-gray-300 text-lg">
               Each track is tailored for different preparation levels and career goals
             </p>
           </motion.div>
@@ -142,14 +142,14 @@ function TCSInterviewBundle() {
                 transition={{ duration: 0.5, delay: index * 0.15 }}
                 whileHover={{ y: -10 }}
               >
-                <Card className="bg-white border border-gray-200 rounded-2xl shadow-lg hover:shadow-xl transition-all h-full overflow-hidden group">
+                <Card className="bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-gray-700 rounded-2xl shadow-lg hover:shadow-xl transition-all h-full overflow-hidden group">
                   {/* Top gradient bar */}
                   <div className={`h-1 bg-gradient-to-r ${track.color}`}></div>
                   
                   <CardContent className="p-8 flex flex-col justify-between h-full">
                     <div>
                       <div className="text-5xl mb-4">{track.icon}</div>
-                      <h3 className="text-3xl font-bold mb-2 text-gray-900">
+                      <h3 className="text-3xl font-bold mb-2 text-black dark:text-white">
                         {track.title}
                       </h3>
                       <div className="flex flex-wrap gap-2 mb-6">
@@ -159,7 +159,7 @@ function TCSInterviewBundle() {
                           </span>
                         ))}
                       </div>
-                      <p className="text-gray-600 leading-relaxed">
+                      <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                         {track.description}
                       </p>
                     </div>
@@ -179,18 +179,18 @@ function TCSInterviewBundle() {
       </section>
 
       {/* Why Choose This Bundle Section */}
-      <section className="px-6 py-20 md:py-32 bg-gradient-to-r from-indigo-50 to-blue-50">
+      <section className="px-6 py-20 md:py-32 bg-white dark:bg-[#0f0f0f] transition-colors duration-300">
         <div className="max-w-6xl mx-auto">
           <motion.h2
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl font-bold text-center mb-4 text-gray-900"
+            className="text-4xl md:text-5xl font-bold text-center mb-4 text-black dark:text-white"
           >
-            Why This Bundle is <span className="text-indigo-600">Your Best Choice</span>
+            Why This Bundle is <span className="text-blue-500 dark:text-purple-400">Your Best Choice</span>
           </motion.h2>
           
-          <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto">
+          <p className="text-center text-gray-600 dark:text-gray-300 mb-16 max-w-2xl mx-auto">
             Built by candidates who've been through the process. Everything here is battle-tested and proven.
           </p>
 
@@ -202,11 +202,11 @@ function TCSInterviewBundle() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card className="bg-white border border-gray-200 rounded-2xl shadow-md hover:shadow-lg transition-all h-full">
+                <Card className="bg-white dark:bg-[#1a1a1a] border border-gray-200 dark:border-gray-700 rounded-2xl shadow-md hover:shadow-lg transition-all h-full">
                   <CardContent className="p-6">
-                    <div className="text-indigo-600 mb-4 text-2xl">{feature.icon}</div>
-                    <h3 className="text-xl font-bold mb-2 text-gray-900">{feature.title}</h3>
-                    <p className="text-gray-600">{feature.description}</p>
+                    <div className="text-blue-500 dark:text-purple-400 mb-4 text-2xl">{feature.icon}</div>
+                    <h3 className="text-xl font-bold mb-2 text-black dark:text-white">{feature.title}</h3>
+                    <p className="text-gray-600 dark:text-gray-300">{feature.description}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -216,18 +216,18 @@ function TCSInterviewBundle() {
       </section>
 
       {/* Credibility Section */}
-      <section className="px-6 py-20 md:py-32 bg-white">
+      <section className="px-6 py-20 md:py-32 bg-white dark:bg-[#0f0f0f] transition-colors duration-300">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-4xl font-bold mb-8 text-gray-900">Built with <span className="text-indigo-600">Real Experience</span></h2>
+            <h2 className="text-4xl font-bold mb-8 text-black dark:text-white">Built with <span className="text-blue-500 dark:text-purple-400">Real Experience</span></h2>
             
-            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+            <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
               Every question, every concept, and every strategy in this bundle is derived from the 
-              <span className="text-gray-900 font-semibold"> real interview experiences of candidates who have successfully cleared TCS interviews</span>.
+              <span className="text-black dark:text-white font-semibold"> real interview experiences of candidates who have successfully cleared TCS interviews</span>.
             </p>
 
             <div className="grid md:grid-cols-3 gap-8 mt-12">
@@ -236,24 +236,24 @@ function TCSInterviewBundle() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="text-4xl font-bold text-indigo-600 mb-2">1000+</div>
-                <p className="text-gray-600">Curated Interview Questions</p>
+                <div className="text-4xl font-bold text-blue-500 dark:text-purple-400 mb-2">1000+</div>
+                <p className="text-gray-600 dark:text-gray-300">Curated Interview Questions</p>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
               >
-                <div className="text-4xl font-bold text-indigo-600 mb-2">500+</div>
-                <p className="text-gray-600">Successful Candidates</p>
+                <div className="text-4xl font-bold text-blue-500 dark:text-purple-400 mb-2">500+</div>
+                <p className="text-gray-600 dark:text-gray-300">Successful Candidates</p>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
-                <div className="text-4xl font-bold text-indigo-600 mb-2">2026</div>
-                <p className="text-gray-600">Latest Curriculum</p>
+                <div className="text-4xl font-bold text-blue-500 dark:text-purple-400 mb-2">2026</div>
+                <p className="text-gray-600 dark:text-gray-300">Latest Curriculum</p>
               </motion.div>
             </div>
           </motion.div>
@@ -261,15 +261,15 @@ function TCSInterviewBundle() {
       </section>
 
       {/* CTA Section */}
-      <section className="px-6 py-20 md:py-28">
+      <section className="px-6 py-20 md:py-28 bg-white dark:bg-[#0f0f0f] transition-colors duration-300">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="max-w-3xl mx-auto text-center bg-gradient-to-r from-indigo-100 to-blue-100 border border-indigo-300 rounded-3xl p-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Ready to Crack Your TCS Interview?</h2>
-          <p className="text-lg text-gray-700 mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black dark:text-white">Ready to Crack Your TCS Interview?</h2>
+          <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
             Start with any track and progress at your own pace. All materials are designed for serious candidates ready to succeed.
           </p>
           <Button className="rounded-full px-8 py-4 text-lg font-semibold bg-gradient-to-r from-indigo-600 to-indigo-700 hover:from-indigo-700 hover:to-indigo-800 transition-all text-white">
@@ -279,8 +279,8 @@ function TCSInterviewBundle() {
       </section>
 
       {/* Footer Section */}
-      <footer className="px-6 py-12 border-t border-gray-200 text-center bg-white">
-        <p className="text-gray-600 mb-2">
+      <footer className="px-6 py-12 border-t border-gray-200 dark:border-gray-700 text-center bg-white dark:bg-[#0f0f0f] transition-colors duration-300">
+        <p className="text-gray-600 dark:text-gray-300 mb-2">
           Crafted by interview experience. Built for your success.
         </p>
         <p className="text-gray-500 text-sm">

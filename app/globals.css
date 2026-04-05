@@ -26,6 +26,28 @@
     --secondary-foreground: 0deg 0% 10%;
   }
 
+  .dark {
+    --background: 0deg 0% 6%;
+    --foreground: 210deg 40% 96%;
+    --card: 0deg 0% 9%;
+    --card-foreground: 210deg 40% 96%;
+    --popover: 0deg 0% 9%;
+    --popover-foreground: 210deg 40% 96%;
+    --muted: 0deg 0% 15%;
+    --muted-foreground: 215deg 20% 75%;
+    --accent: 188deg 100% 58%;
+    --accent-foreground: 0deg 0% 5%;
+    --destructive: 0deg 72% 51%;
+    --destructive-foreground: 210deg 40% 96%;
+    --border: 0deg 0% 20%;
+    --input: 0deg 0% 18%;
+    --ring: 188deg 100% 58%;
+    --primary: 188deg 100% 58%;
+    --primary-foreground: 0deg 0% 5%;
+    --secondary: 0deg 0% 14%;
+    --secondary-foreground: 210deg 40% 96%;
+  }
+
   html {
     scroll-behavior: smooth;
   }
@@ -35,5 +57,52 @@
     color: hsl(var(--foreground));
     font-feature-settings: "rlig" 1, "calt" 1;
     min-height: 100vh;
+    transition: background-color 300ms ease, color 300ms ease;
+  }
+
+  section,
+  [data-slot="card"] {
+    transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease;
+  }
+
+  a {
+    color: hsl(var(--primary));
+    transition: color 300ms ease;
+  }
+
+  a:hover {
+    color: hsl(var(--accent));
+  }
+}
+
+@layer utilities {
+  .dark-glow {
+    transition: box-shadow 300ms ease;
+  }
+
+  .dark .dark-glow {
+    box-shadow: 0 0 14px rgba(34, 211, 238, 0.35);
+  }
+
+  .dark .bg-white {
+    background-color: #0f0f0f;
+  }
+
+  .dark [data-slot="card"].bg-white {
+    background-color: #1a1a1a;
+  }
+
+  .dark .text-black,
+  .dark .text-gray-900 {
+    color: #ffffff;
+  }
+
+  .dark .text-gray-700,
+  .dark .text-gray-600 {
+    color: #d1d5db;
+  }
+
+  .dark .border-gray-200 {
+    border-color: #374151;
   }
 }
